@@ -1,0 +1,173 @@
+.position-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.position-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #f0f0f0;
+}
+
+.position-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0 20px;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.column-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.candidate-count {
+  background-color: #007bff;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 14px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.column-cards {
+  min-height: 50px;
+}
+
+.candidate-card {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: grab;
+  transition: all 0.2s;
+  border-left: 4px solid #007bff;
+}
+
+.candidate-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.candidate-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.candidate-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.candidate-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.score-value {
+  font-weight: bold;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.score-label {
+  color: #666;
+  font-size: 14px;
+}
+
+.candidate-step {
+  text-align: right;
+}
+
+.step-name {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.empty-column {
+  text-align: center;
+  padding: 30px 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .kanban-column {
+    min-width: 100%;
+  }
+  
+  .position-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .position-title {
+    font-size: 24px;
+  }
+  
+  .back-button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
